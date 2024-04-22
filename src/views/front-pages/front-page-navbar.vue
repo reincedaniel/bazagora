@@ -159,7 +159,7 @@ const isPageActive = computed(() => menuItems.some(item => item.navItems.some(li
           {{ item.label }}
         </RouterLink>
 
-        <div class="font-weight-medium cursor-pointer">
+        <!-- <div class="font-weight-medium cursor-pointer">
           <div
             :class="[isMenuOpen ? 'mb-6 active-link' : '', isPageActive ? 'active-link' : '']"
             style="color: rgba(var(--v-theme-on-surface));"
@@ -220,7 +220,7 @@ const isPageActive = computed(() => menuItems.some(item => item.navItems.some(li
           class="font-weight-medium nav-link"
         >
           Admin
-        </RouterLink>
+        </RouterLink> -->
       </div>
     </div>
 
