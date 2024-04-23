@@ -1,20 +1,13 @@
 <script setup>
 import { useGenerateImageVariant } from '@/@core/composable/useGenerateImageVariant'
 import joinArrow from '@images/front-pages/icons/Join-community-arrow.png'
-import heroDashboardImgDark from '@images/front-pages/landing-page/hero-dashboard-dark.png'
 import heroDashboardImgLight from '@images/front-pages/landing-page/hero-dashboard-light.jpg'
 import heroElementsImgDark from '@images/front-pages/landing-page/hero-elements-dark.png'
 import heroElementsImgLight from '@images/front-pages/landing-page/hero-elements-light.png'
-import InstructorPoster from '@images/pages/instructor-poster.png'
-import { VideoPlayer } from '@videojs-player/vue'
 import { useMouse } from '@vueuse/core'
 import 'video.js/dist/video-js.css'
 import { useTheme } from 'vuetify'
 
-import tiktokImg from '@images/front-pages/landing-page/tiktok-icon.png'
-import fbImg from '@images/front-pages/landing-page/fb-icon.png'
-import ybImg from '@images/front-pages/landing-page/yb-icon.png'
-import instaImg from '@images/front-pages/landing-page/insta-icon.png'
 
 const theme = useTheme()
 const heroElementsImg = useGenerateImageVariant(heroElementsImgLight, heroElementsImgDark)
@@ -78,7 +71,7 @@ const translateMouse = computed(() => {
              { image: tiktokImg, store: '@bazagora', to:'https://www.tiktok.com/@bazagora' },
              { image: fbImg, store: '@bazagora', to:'https://www.facebook.com/profile.php?id=61558639232694' },
              { image: ybImg, store: '@bazagora', to:'https://www.youtube.com/@bazagora' },
-             { image: instaImg, store: '@bazagora_', to:'https://www.facebook.com/profile.php?id=61558639232694' },
+             { image: instaImg, store: '@bazagora_', to:'https://www.instagram.com/bazagora_/' },
            ]"
            :key="index"
            color="#282c3e"

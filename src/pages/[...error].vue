@@ -1,8 +1,8 @@
 <script setup>
-import { useGenerateImageVariant } from '@core/composable/useGenerateImageVariant'
-import misc404 from '@images/pages/404.png'
-import miscMaskDark from '@images/pages/misc-mask-dark.png'
-import miscMaskLight from '@images/pages/misc-mask-light.png'
+import { useGenerateImageVariant } from '@core/composable/useGenerateImageVariant';
+import misc404 from '@images/pages/404.png';
+import miscMaskDark from '@images/pages/misc-mask-dark.png';
+import miscMaskLight from '@images/pages/misc-mask-light.png';
 
 const authThemeMask = useGenerateImageVariant(miscMaskLight, miscMaskDark)
 
@@ -19,15 +19,15 @@ definePage({
   <div class="misc-wrapper">
     <ErrorHeader
       status-code="404"
-      title="Page Not Found ⚠️"
-      description="We couldn't find the page you are looking for."
+      title="Página não encontrada ⚠️"
+      description="Não encontramos a página que procura."
     />
 
     <VBtn
       to="/"
       class="mb-11"
     >
-      Back to Home
+      Voltar para o início
     </VBtn>
 
     <!-- 👉 Image -->

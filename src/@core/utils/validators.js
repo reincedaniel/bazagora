@@ -3,9 +3,9 @@ import { isEmpty, isEmptyArray, isNullOrUndefined } from './helpers'
 // 👉 Required Validator
 export const requiredValidator = value => {
   if (isNullOrUndefined(value) || isEmptyArray(value) || value === false)
-    return 'This field is required'
+    return 'Campo Obrigatório'
   
-  return !!String(value).trim().length || 'This field is required'
+  return !!String(value).trim().length || 'Campo Obrigatório'
 }
 
 // 👉 Email Validator
@@ -14,9 +14,9 @@ export const emailValidator = value => {
     return true
   const re = /^(?:[^<>()[\]\\.,;:\s@"]+(?:\.[^<>()[\]\\.,;:\s@"]+)*|".+")@(?:\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\]|(?:[a-z\-\d]+\.)+[a-z]{2,})$/i
   if (Array.isArray(value))
-    return value.every(val => re.test(String(val))) || 'The Email field must be a valid email'
+    return value.every(val => re.test(String(val))) || 'O campo E-mail deve ser um e-mail válido'
   
-  return re.test(String(value)) || 'The Email field must be a valid email'
+  return re.test(String(value)) || 'O campo E-mail deve ser um e-mail válido'
 }
 
 // 👉 Password Validator

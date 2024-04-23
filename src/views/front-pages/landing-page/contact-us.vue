@@ -1,9 +1,11 @@
 <script setup>
-import ConnectImg from '@images/front-pages/landing-page/contact-customer-service.jpg'
+import { VForm } from 'vuetify/components/VForm';
 
+import ConnectImg from '@images/front-pages/landing-page/contact-customer-service.jpg';
 const name = ref('')
 const email = ref('')
 const message = ref('')
+const form = ref()
 </script>
 
 <template>
@@ -103,7 +105,8 @@ const message = ref('')
                 <p class="mb-6">
                   Estamos ansiosos para colaborar contigo na tua jornada de descoberta e realização. Entra em contacto connosco hoje mesmo para saberes mais sobre como podemos ajudar-te a alcançar os teus objetivos.
                 </p>
-                <VForm @submit.prevent="() => {}">
+                <VForm name="contact" method="POST" data-netlify="true"  ref="form"
+    lazy-validation @submit.prevent="() => {}">
                   <VRow>
                     <VCol
                       cols="12"
@@ -111,8 +114,10 @@ const message = ref('')
                     >
                       <AppTextField
                         v-model="name"
+                        :rules="[requiredValidator]"
                         placeholder="Daniel Carlos"
                         label="Nome Completo"
+                        name="name"
                       />
                     </VCol>
 
@@ -122,22 +127,26 @@ const message = ref('')
                     >
                       <AppTextField
                         v-model="email"
+                        :rules="[emailValidator, requiredValidator]"
                         placeholder="daniel.calros@exemplo.com"
                         label="E-mail"
+                        name="email"
                       />
                     </VCol>
 
                     <VCol cols="12">
                       <AppTextarea
                         v-model="message"
+                        :rules="[requiredValidator]"
                         placeholder="escreva a mensagem"
                         rows="3"
                         label="Mensagem"
+                        name="message"
                       />
                     </VCol>
 
                     <VCol>
-                      <VBtn type="submit">
+                      <VBtn :disabled="!email.length || !name.length || !message.length" type="submit">
                         Enviar mensagem
                       </VBtn>
                     </VCol>

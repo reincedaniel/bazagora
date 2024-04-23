@@ -1,21 +1,17 @@
 <script setup>
-import check from '@images/svg/Check.svg'
-import keyboard from '@images/svg/keyboard.svg'
-import laptop from '@images/svg/laptop.svg'
+import gift from '@images/svg/gift.svg'
 import paper from '@images/svg/paper-send.svg'
 import rocket from '@images/svg/rocket.svg'
-import user from '@images/svg/user.svg'
-import wizard from '@images/svg/wizard-submit.svg'
-import personal from '@images/svg/wizard-personal.svg'
 import account from '@images/svg/wizard-account.svg'
-import gift from '@images/svg/gift.svg'
+import personal from '@images/svg/wizard-personal.svg'
+import wizard from '@images/svg/wizard-submit.svg'
 
 
 
 const featuresData = [
   {
     title: 'Aconselhamento',
-    desc: 'Oferecemos aconselhamento personalizado para ajudar os jovens a navegarem pelos desafios da vida. A nossa equipa de mentores está aqui para ouvir, orientar e apoiar em todas as áreas da vida, desde questões académicas até problemas pessoais.ento',
+    desc: 'Oferecemos aconselhamento personalizado para ajudar os jovens a navegarem pelos desafios da vida. A nossa equipa de mentores está aqui para ouvir, orientar e apoiar em todas as áreas da vida, desde questões académicas até problemas pessoais.',
     icon: account,
   },
   {
@@ -64,7 +60,7 @@ const featuresData = [
               Paga a Visão,
             </div>
           </div>
-          a hora é agora  <span>&nbsp;<i> "não dorme sono"! </i></span> 
+          a hora é agora  <span>&nbsp;<i> "Junta-te a nós"! </i></span> 
         </div>
         
         <div class="hero-text-box text-center px-6 pt-3">

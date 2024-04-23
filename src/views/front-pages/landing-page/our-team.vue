@@ -2,7 +2,7 @@
 import teamPerson1 from '@images/front-pages/landing-page/team-member-1.jpg'
 import teamPerson2 from '@images/front-pages/landing-page/team-member-2.jpg'
 import teamPerson3 from '@images/front-pages/landing-page/team-member-3.jpg'
-import teamPerson4 from '@images/front-pages/landing-page/team-member-4.jpeg'
+import teamPerson4 from '@images/front-pages/landing-page/team-member-4.jpg'
 import teamPerson5 from '@images/front-pages/landing-page/team-member-5.jpg'
 
 const teamData = ref([

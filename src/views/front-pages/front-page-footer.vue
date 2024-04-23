@@ -1,17 +1,16 @@
 <script setup>
 import footerDarkBg from '@images/front-pages/backgrounds/footer-bg-dark.png'
 import footerLightBg from '@images/front-pages/backgrounds/footer-bg-light.png'
-import appleImg from '@images/front-pages/landing-page/apple-icon.png'
-import googlePlayImg from '@images/front-pages/landing-page/google-play-icon.png'
 import { VNodeRenderer } from '@layouts/components/VNodeRenderer'
 import { themeConfig } from '@themeConfig'
 
-import tiktokImg from '@images/front-pages/landing-page/tiktok-icon.png'
 import fbImg from '@images/front-pages/landing-page/fb-icon.png'
-import ybImg from '@images/front-pages/landing-page/yb-icon.png'
 import instaImg from '@images/front-pages/landing-page/insta-icon.png'
+import tiktokImg from '@images/front-pages/landing-page/tiktok-icon.png'
+import ybImg from '@images/front-pages/landing-page/yb-icon.png'
 
 const footerBg = useGenerateImageVariant(footerLightBg, footerDarkBg)
+const email = ref('')
 
 const pagesList = [
   {
@@ -93,10 +92,11 @@ Entra em contacto connosco hoje mesmo para saberes mais sobre como podemos ajuda
               </div>
               <VForm class="subscribe-form d-flex align-center">
                 <AppTextField
+                v-model="email"
                   label="Assine o boletim informativo"
                   placeholder="daniel.carlos@exemplo.com"
                 />
-                <VBtn class="align-self-end rounded-s-0">
+                <VBtn :disabled="!email.length" class="align-self-end rounded-s-0">
                   Se inscrever
                 </VBtn>
               </VForm>
@@ -184,7 +184,7 @@ Entra em contacto connosco hoje mesmo para saberes mais sobre como podemos ajuda
                     { image: tiktokImg, store: '@bazagora', to:'https://www.tiktok.com/@bazagora' },
                     { image: fbImg, store: '@bazagora', to:'https://www.facebook.com/profile.php?id=61558639232694' },
                     { image: ybImg, store: '@bazagora', to:'https://www.youtube.com/@bazagora' },
-                    { image: instaImg, store: '@bazagora_', to:'https://www.facebook.com/profile.php?id=61558639232694' },
+                    { image: instaImg, store: '@bazagora_', to:'https://www.instagram.com/bazagora_' },
                   ]"
                   :key="index"
                   color="#282c3e"
