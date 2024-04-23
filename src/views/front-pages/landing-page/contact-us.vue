@@ -6,6 +6,21 @@ const name = ref('')
 const email = ref('')
 const message = ref('')
 const form = ref()
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => navigate("/done"))
+    .catch((error) => alert(error));
+};
 </script>
 
 <template>
@@ -106,7 +121,7 @@ const form = ref()
                   Estamos ansiosos para colaborar contigo na tua jornada de descoberta e realização. Entra em contacto connosco hoje mesmo para saberes mais sobre como podemos ajudar-te a alcançar os teus objetivos.
                 </p>
                 <VForm name="contact" method="POST" action="/done" netlify data-netlify="true"  ref="form"
-    lazy-validation>
+    lazy-validation @submit.prevent="handleSubmit">
                   <VRow>
                     <VCol
                       cols="12"
