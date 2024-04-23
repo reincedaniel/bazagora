@@ -106,7 +106,7 @@ const form = ref()
                   Estamos ansiosos para colaborar contigo na tua jornada de descoberta e realização. Entra em contacto connosco hoje mesmo para saberes mais sobre como podemos ajudar-te a alcançar os teus objetivos.
                 </p>
                 <VForm name="contact" method="POST" data-netlify="true"  ref="form"
-    lazy-validation @submit.prevent="() => {}">
+    lazy-validation>
                   <VRow>
                     <VCol
                       cols="12"
