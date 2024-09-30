@@ -144,7 +144,7 @@ target="_blank"
                 :src="heroDashboardImg"
                 alt="Bazagora"
                 class="animation-img"
-                style="border-radius: 15px;"
+                style="border-radius: 15px; margin-bottom: 50px"
               >
               <!-- <img
                 :src="heroElementsImg"

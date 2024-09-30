@@ -43,7 +43,7 @@ const featuresData = [
 </script>
 
 <template>
-  <VContainer id="features">
+  <VContainer id="features" style="margin-top:90px">
     <div class="feature-cards">
       <div class="headers d-flex justify-center flex-column align-center mb-12">
         <VChip
