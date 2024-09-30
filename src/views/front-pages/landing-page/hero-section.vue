@@ -36,7 +36,7 @@ const translateMouse = computed(() => {
         <VContainer >
           <div class="hero-text-box text-center px-6">
             <h1 class="hero-title mb-4">
-              Olá, então? "Paga a Visão"!
+              Olá, então? "Pega a Visão"!
             </h1>
             <h6 class="mb-6 text-h6">
               No Bazagora, estamos dedicados a ajudar jovens de todo o mundo a alcançar todo o seu potencial. Acreditamos que o conhecimento, a perspetiva de vida e o dinamismo são essenciais para um futuro brilhante.

@@ -57,7 +57,7 @@ const featuresData = [
         <div class="d-flex text-h4 mb-1 align-center flex-wrap justify-center">
           <div class="position-relative me-2">
             <div class="section-title">
-              Paga a Visão,
+              Pega a Visão,
             </div>
           </div>
           a hora é agora  <span>&nbsp;<i> "Junta-te a nós"! </i></span> 

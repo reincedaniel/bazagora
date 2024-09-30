@@ -1,9 +1,8 @@
 <script setup>
-import teamPerson1 from '@images/front-pages/landing-page/team-member-1.jpg'
-import teamPerson2 from '@images/front-pages/landing-page/team-member-2.jpg'
-import teamPerson3 from '@images/front-pages/landing-page/team-member-3.jpg'
-import teamPerson4 from '@images/front-pages/landing-page/team-member-4.jpg'
-import teamPerson5 from '@images/front-pages/landing-page/team-member-5.jpg'
+import teamPerson1 from '@images/front-pages/landing-page/team-member-1.jpg';
+import teamPerson2 from '@images/front-pages/landing-page/team-member-2.jpg';
+import teamPerson3 from '@images/front-pages/landing-page/team-member-3.jpg';
+import teamPerson4 from '@images/front-pages/landing-page/team-member-4.jpg';
 
 const teamData = ref([
   {
@@ -34,7 +33,7 @@ const teamData = ref([
     nickname:'@vanessa.jose'
   },
   {
-    name: 'Wesley Sten',
+    name: 'Wesley Pascoal',
     position: 'Especialista em Bolsas de Estudo e Intercâmbio',
     image: teamPerson4,
     backgroundColor: 'rgba(86, 202, 0, 0.16)',
@@ -42,7 +41,7 @@ const teamData = ref([
     isHover: false,
     nickname:'@emigrantesvision11'
   },
-  {
+/*   {
     name: 'Diangani Robinho',
     position: 'Gerente de Parcerias Institucionais',
     image: teamPerson5,
@@ -50,7 +49,7 @@ const teamData = ref([
     borderColor: 'rgba(128, 90, 0,0.16)',
     isHover: false,
     nickname:'@senhor_sucesso'
-  },
+  }, */
 ])
 </script>
 

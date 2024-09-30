@@ -10,8 +10,8 @@ const pricingPlans = [
   {
     title: 'Aconselhamento',
     image: paperPlane,
-    monthlyPrice: 19,
-    yearlyPrice: 168,
+    monthlyPrice: 3,
+    yearlyPrice: 24,
     features: [
       'Aconselhamento Personalizado',
       'Suporte em todas as áreas da vida',
@@ -25,14 +25,14 @@ const pricingPlans = [
   {
     title: 'Bolsas de Estudo',
     image: plane,
-    monthlyPrice: 29,
-    yearlyPrice: 264,
+    monthlyPrice: 600,
+    yearlyPrice: 0,
     features: [
       'Bolsas de Estudo Disponíveis',
       'Acesso a Oportunidades Educativas',
       'Transformação de Vidas através da Educação',
     ],
-    supportType: 'Padrão',
+    supportType: '+ Os custos adicionais',
     supportMedium: 'Email & Chat',
     respondTime: 'Tempo Médio de Resposta: 6h',
     current: true,
@@ -40,14 +40,14 @@ const pricingPlans = [
   {
     title: 'Inscrições',
     image: shuttleRocket,
-    monthlyPrice: 49,
-    yearlyPrice: 444,
+    monthlyPrice: 475,
+    yearlyPrice: 0,
     features: [
       'Facilitação de Processos de Inscrição',
       'Acesso a Instituições de Ensino e Treinamento',
       'Apoio Profissional para Inscrições',
     ],
-    supportType: 'Exclusivo',
+    supportType: '+ Os custos adicionais',
     supportMedium: 'Email, Chat & Google Meet',
     respondTime: 'Suporte ao Vivo',
     current: false,
@@ -55,14 +55,14 @@ const pricingPlans = [
   {
     title: 'Intercâmbio Cultural',
     image: shuttleRocket,
-    monthlyPrice: 49,
-    yearlyPrice: 444,
+    monthlyPrice: 700,
+    yearlyPrice: 0,
     features: [
       'Programas de Intercâmbio Cultural',
       'Aprendizado de Novas Línguas',
       'Imersão em Diferentes Culturas',
     ],
-    supportType: 'Exclusivo',
+    supportType: '+ Os custos adicionais',
     supportMedium: 'Email, Chat & Google Meet',
     respondTime: 'Suporte ao Vivo',
     current: false,
@@ -70,23 +70,23 @@ const pricingPlans = [
   {
     title: 'Transcrição de Documentos',
     image: shuttleRocket,
-    monthlyPrice: 49,
-    yearlyPrice: 444,
+    monthlyPrice: 15,
+    yearlyPrice: 0,
     features: [
       'Serviços de Transcrição de Documentos',
       'Precisão e Confiabilidade',
       'Apoio em Processos Burocráticos e Acadêmicos',
     ],
-    supportType: 'Exclusivo',
+    supportType: '',
     supportMedium: 'Email, Chat & Google Meet',
     respondTime: 'Suporte ao Vivo',
     current: false,
   },
   {
-    title: 'E Mais Muitos',
+    title: 'Mentoria',
     image: shuttleRocket,
-    monthlyPrice: 49,
-    yearlyPrice: 444,
+    monthlyPrice: 35,
+    yearlyPrice: 246,
     features: [
       'Ampla Gama de Serviços Personalizados',
       'Suporte Individualizado',
@@ -183,17 +183,20 @@ const pricingPlans = [
                 <div class="d-flex justify-center mb-8 position-relative">
                   <div class="d-flex align-end">
                     <div class="pricing-title text-primary me-1">
-                      ${{ annualMonthlyPlanPriceToggler ? Math.floor(plan.yearlyPrice) / 12 : plan.monthlyPrice }}
+                      {{ annualMonthlyPlanPriceToggler ?(plan.yearlyPrice!=0? Math.round(plan.yearlyPrice / 12):plan.monthlyPrice ): plan.monthlyPrice }} mil KZ
                     </div>
-                    <span class="text-disabled mb-2">/mo</span>
+                    <span v-if="plan.yearlyPrice!=0" class="text-disabled mb-2">/mês</span>
+                    <span v-else class="annual-price-text position-absolute text-sm text-disabled">{{ plan.supportType }}</span>
+                    
                   </div>
 
                   <!-- 👉 Annual Price -->
                   <span
+                  v-if="plan.yearlyPrice!=0"
                     v-show="annualMonthlyPlanPriceToggler"
                     class="annual-price-text position-absolute text-sm text-disabled"
                   >
-                    {{ plan.yearlyPrice === 0 ? 'free' : `USD ${plan.yearlyPrice}/Year` }}
+                    {{ plan.yearlyPrice === 0 ? 'free' : `${plan.yearlyPrice} mil KZ/Anual` }}
                   </span>
                 </div>
                 <VList class="card-list">
